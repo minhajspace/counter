@@ -1,7 +1,8 @@
 
-import Counter from "./components/Counter";
+import Counter from './Counter'
 import { Provider } from "react-redux";
-import store from "./store";
+import store from './Store'
+
 function App() {
   return (
     <Provider store={store}>
@@ -9,4 +10,4 @@ function App() {
     </Provider>
   );
 }
-export default App;
+export default App
