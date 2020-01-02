@@ -1,5 +1,7 @@
 import React from 'react'
 let userInput = prompt;
+console.log(userInput)
+console.log(window.userInput)
 class Counter extends React.Component {
     state = {
         counter: 0
@@ -18,6 +20,12 @@ class Counter extends React.Component {
 
     }
 
+    jump = () => {
+        userInput = prompt("enter the number");
+        this.setState({ counter: userInput })
+    }
+
+
 
     render() {
         return (
@@ -27,18 +35,13 @@ class Counter extends React.Component {
 
                         <h1><center>{this.state.counter}</center></h1>
 
-
                     </div>
 
 
                     <div className="extra content">
                         <div className="ui two buttons">
                             <div className="ui basic green button" onClick={this.onIncrementClick}>Increment</div>
-                            <div className="ui basic red button" onClick={() => {
-                                // let userInput = prompt;
-                                // console.log(userInput)
-                                this.setState({ counter: window.prompt })
-                            }}>Decrement</div>
+                            <div className="ui basic red button" onClick={this.onDecrementClick}>Decrement</div>
 
 
                         </div>
@@ -46,7 +49,7 @@ class Counter extends React.Component {
                         <div className="extra content">
                             <div className="ui two buttons">
                                 <div className="ui basic green button" onClick={this.onResetClick}>Reset</div>
-                                <div className="ui basic yellow button" onClick={userInput}>Jump</div>
+                                <div className="ui basic yellow button" onClick={this.jump}>Jump</div>
 
 
                             </div>
