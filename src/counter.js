@@ -1,46 +1,29 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { increment, decrement } from "../actions";
+import React from 'react'
 
-class Counter extends Component {
-    static propTypes = {
-        count: PropTypes.number,
-        increment: PropTypes.func
-    };
-
-    handleIncrement = e => {
-        e.preventDefault();
-        this.props.increment();
-    };
-
-    handleDecrement = e => {
-        e.preventDefault();
-        this.props.decrement();
-    };
-
+class Counter extends React.Component {
+    state = {
+        counter: 0
+    }
     render() {
         return (
-            <div>
-                <h1>{this.props.count}</h1>
-                <a href="#" onClick={this.handleIncrement}>
-                    increment
-        </a>
-                <a href="#" onClick={this.handleDecrement}>
-                    decrement
-        </a>
+            <div className="ui cards">
+                <div className="card">
+                    <div className="content">
+
+
+
+
+                        <div class="extra content">
+                            <div class="ui two buttons">
+                                <div class="ui basic green button">Increment</div>
+                                <div class="ui basic red button">Decrement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        );
+
+        )
     }
 }
-
-const mapStateToProps = state => {
-    return {
-        count: state.count
-    };
-};
-
-export default connect(
-    mapStateToProps,
-    { increment, decrement }
-)(Counter);
+export default Counter; 
