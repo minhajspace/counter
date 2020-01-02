@@ -1,18 +1,20 @@
 import React from 'react'
 let userInput = prompt;
-console.log(userInput)
-console.log(window.userInput)
+let jumpby;
+let value = 1;
+
 class Counter extends React.Component {
     state = {
-        counter: 0
+        counter: 0,
+
     }
 
     onIncrementClick = () => {
-        this.setState({ counter: this.state.counter + 1 })
+        this.setState({ counter: this.state.counter + value })
 
     }
     onDecrementClick = () => {
-        this.setState({ counter: this.state.counter - 1 })
+        this.setState({ counter: this.state.counter - value })
 
     }
     onResetClick = () => {
@@ -25,6 +27,13 @@ class Counter extends React.Component {
         this.setState({ counter: userInput })
     }
 
+
+
+    incrementBy = () => {
+        jumpby = prompt("Increase by the number which you want")
+
+
+    }
 
 
     render() {
@@ -48,9 +57,13 @@ class Counter extends React.Component {
 
                         <div className="extra content">
                             <div className="ui two buttons">
-                                <div className="ui basic green button" onClick={this.onResetClick}>Reset</div>
-                                <div className="ui basic yellow button" onClick={this.jump}>Jump</div>
-
+                                <div className="ui basic brown button" onClick={this.jump}>Jump</div>
+                                <div className="ui basic pink button" onClick={this.incrementBy}>Increment By...</div>
+                            </div>
+                        </div>
+                        <div className="extra content">
+                            <div className="ui two buttons">
+                                <div className="ui basic black button" onClick={this.onResetClick}>Reset</div>
 
                             </div>
 
