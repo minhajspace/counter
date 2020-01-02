@@ -18,7 +18,9 @@ class Counter extends React.Component {
         return (
             <div className="ui cards">
                 <div className="card">
-                    <div className="content">
+                    <div className="content ">
+
+                        <h1><center>{this.state.counter}</center></h1>
                     </div>
 
 
