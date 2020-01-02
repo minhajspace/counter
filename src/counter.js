@@ -7,11 +7,15 @@ class Counter extends React.Component {
 
     onIncrementClick = () => {
         this.setState({ counter: this.state.counter + 1 })
-        console.log(this.state.counter)
+
     }
     onDecrementClick = () => {
         this.setState({ counter: this.state.counter - 1 })
-        console.log(this.state.counter)
+
+    }
+    onResetClick = () => {
+        this.setState({ counter: this.state.counter = 0 })
+
     }
 
     render() {
@@ -21,14 +25,15 @@ class Counter extends React.Component {
                     <div className="content ">
 
                         <h1><center>{this.state.counter}</center></h1>
+
                     </div>
 
 
-
                     <div className="extra content">
-                        <div className="ui two buttons">
+                        <div className="ui three buttons">
                             <div className="ui basic green button" onClick={this.onIncrementClick}>Increment</div>
                             <div className="ui basic red button" onClick={this.onDecrementClick}>Decrement</div>
+                            <div className="ui basic green button" onClick={this.onResetClick}>Reset</div>
 
                         </div>
                     </div>
