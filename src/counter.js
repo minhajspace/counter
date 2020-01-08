@@ -19,6 +19,7 @@ class Counter extends React.Component {
     }
     onResetClick = () => {
         this.setState({ counter: 0 })
+        this.setState({})
 
     }
 
@@ -57,8 +58,8 @@ class Counter extends React.Component {
 
                         <div className="extra content">
                             <div className="ui two buttons">
-                                <div className="ui basic brown button" onClick={this.jump}>Jump</div>
-                                <div className="ui basic pink button" onClick={this.incrementBy}>Increment By...</div>
+                                <div className="ui basic brown button" onClick={this.jump}>Jump to </div>
+
                             </div>
                         </div>
                         <div className="extra content">
