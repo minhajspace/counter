@@ -24,13 +24,14 @@ class Counter extends React.Component {
     }
 
     jump = () => {
-        userInput = prompt("enter the number");
+        userInput = parseInt(prompt("enter the number"));
         this.setState({ counter: userInput })
     }
 
 
 
     incrementBy = () => {
+
         jumpby = prompt("Increase by the number which you want")
 
 
